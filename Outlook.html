@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloraa Medical Tourism - Patient Welcome Guide 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Hind Siliguri for Bengali support -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        veloraa: {
+                            navy: '#0b3c5d',
+                            blue: '#1d2731',
+                            accent: '#328cc1',
+                            red: '#d9534f',
+                            gold: '#d9b310',
+                            light: '#f4f7f6',
+                            card: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Hind Siliguri', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Hind Siliguri', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .bengali-text {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .gradient-header {
+            background: linear-gradient(135deg, #0b3c5d 0%, #1d2731 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(11, 60, 93, 0.08);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-sky-200 selection:text-sky-900">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- Veloraa Logo Icon -->
+                <div class="relative w-10 h-10 flex items-center justify-center bg-veloraa-navy text-white rounded-xl font-bold shadow-md">
+                    <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-veloraa-navy block leading-none">VELORAA</span>
+                    <span class="text-[10px] uppercase tracking-widest font-semibold text-slate-500 block mt-0.5">Medical Tourism</span>
+                </div>
+            </div>
+
+            <!-- Language Switcher & Direct Contact -->
+            <div class="flex items-center space-x-3">
+                <button id="langToggleBtn" onclick="toggleLanguage()" class="flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold transition">
+                    <i class="fa-solid fa-globe text-veloraa-accent"></i>
+                    <span id="langBtnText">বাংলা সংস্করণ</span>
+                </button>
+                <a href="https://wa.me/8615529507360" target="_blank" class="hidden sm:flex items-center space-x-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold transition shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>+86 155 29507360</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="gradient-header text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+            <i class="fa-solid fa-heart-pulse text-[280px]"></i>
+        </div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide text-sky-200 uppercase mb-4 border border-white/10">
+                <i class="fa-solid fa-shield-halved mr-1.5"></i> Patient Welcome Guide 2026
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
+                Medical Travel from Bangladesh to China
+            </h1>
+            <p class="lang-bn text-xl sm:text-2xl text-slate-200 font-medium mb-6 font-sans">
+                বাংলাদেশ থেকে চীনে চিকিৎসা ভ্রমণ — সম্পূর্ণ গাইড নির্দেশিকা
+            </p>
+            <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-300">
+                Medical coordination and translation agency. We make your cross-border treatment seamless, transparent, and fully supported at every step.
+            </p>
+            
+            <div class="mt-8 flex flex-wrap justify-center gap-4 text-xs font-medium text-slate-300">
+                <span class="flex items-center bg-white/5 px-3 py-1.5 rounded-lg"><i class="fa-solid fa-envelope text-sky-400 mr-2"></i>info@veloraa.health</span>
+                <span class="flex items-center bg-white/5 px-3 py-1.5 rounded-lg"><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i>+86 155 29507360</span>
+                <span class="flex items-center bg-white/5 px-3 py-1.5 rounded-lg"><i class="fa-solid fa-globe text-indigo-400 mr-2"></i>veloraa.health</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Jump Navigation -->
+    <div class="bg-white border-b border-slate-200 sticky top-[57px] z-40 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 overflow-x-auto py-2.5 flex items-center space-x-2 text-xs font-semibold text-slate-600 no-scrollbar">
+            <a href="#welcome" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">Welcome</a>
+            <a href="#before-start" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">1. Preparation</a>
+            <a href="#process" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">2. 8-Step Process</a>
+            <a href="#service-fee" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">3. Service Fee</a>
+            <a href="#includes" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">4. Included Services</a>
+            <a href="#accommodation" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">5. Accommodation</a>
+            <a href="#not-included" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">6. Exclusions</a>
+            <a href="#payment-terms" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">7. Payment Terms</a>
+            <a href="#contact" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-veloraa-navy hover:text-white transition whitespace-nowrap">8. Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        <!-- Welcome Introduction -->
+        <section id="welcome" class="bg-white rounded-2xl p-6 sm:p-8 card-shadow border border-slate-100">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-veloraa-accent">Welcome / স্বাগতম</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-800">Thank you for considering Veloraa</h2>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        This guide explains what to prepare before you fill in the patient form, how our process works, what the service fee covers, how your accommodation is arranged, and when payments are due. Please keep it — you will want to read it again before you travel.
+                    </p>
+                    <div class="p-4 bg-amber-50 rounded-xl border-l-4 border-amber-500 text-amber-900 text-sm">
+                        <p class="font-semibold mb-1"><i class="fa-solid fa-bookmark mr-2 text-amber-600"></i>Recommendation</p>
+                        <p>Keep this guide on your phone or print it. Check the checklist and payment terms right before traveling.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200/80 space-y-4">
+                    <h3 class="font-bold text-slate-800 text-lg flex items-center border-b pb-3 border-slate-200">
+                        <i class="fa-solid fa-bangla-text text-veloraa-navy mr-2.5"></i>
+                        বাংলা বার্তা
+                    </h3>
+                    <p class="lang-bn text-slate-700 leading-relaxed text-sm">
+                        ভেলোরাকে বিবেচনা করার জন্য ধন্যবাদ। এই নির্দেশিকায় বলা হয়েছে- রোগীর ফর্ম পূরণের আগে কী প্রস্তুত করবেন, আমাদের প্রক্রিয়া কীভাবে কাজ করে, সার্ভিস ফি-তে কী অন্তর্ভুক্ত, থাকার ব্যবস্থা কীভাবে হয় এবং কখন পেমেন্ট করতে হবে। এটি সংরক্ষণ করুন - যাত্রার আগে আবার পড়তে চাইবেন।
+                    </p>
+                    <p class="lang-bn text-xs text-slate-500 italic">
+                        এই নির্দেশিকাটি ফোনে রাখুন, অথবা প্রিন্ট করে সঙ্গে নিন। কিছু স্পষ্ট না হলে মেসেজ করার নম্বরও এখানেই আছে।
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Before You Start -->
+        <section id="before-start" class="bg-white rounded-2xl p-6 sm:p-8 card-shadow border border-slate-100 space-y-8">
+            <div class="border-b border-slate-100 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Section 01</span>
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">1</span>
+                    Before You Start / শুরুর আগে
+                </h2>
+                <p class="text-slate-500 text-sm mt-1">The form takes about 10 minutes. Have these ready before you open it.</p>
+            </div>
+
+            <!-- 3 Steps Header Pipeline -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center relative">
+                    <span class="text-xs uppercase font-bold text-slate-400">STEP 1 / ধাপ ১</span>
+                    <h4 class="font-bold text-slate-800 text-base mt-1">Fill the form</h4>
+                    <p class="lang-bn text-xs text-slate-500">ফর্ম পূরণ করুন (প্রায় ১০ মিনিট)</p>
+                </div>
+                <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 text-center relative">
+                    <span class="text-xs uppercase font-bold text-sky-500">STEP 2 / ধাপ ২</span>
+                    <h4 class="font-bold text-sky-900 text-base mt-1">Send your reports</h4>
+                    <p class="lang-bn text-xs text-sky-700">রিপোর্ট পাঠান (WhatsApp-এ)</p>
+                </div>
+                <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-center relative">
+                    <span class="text-xs uppercase font-bold text-emerald-600">STEP 3 / ধাপ ৩</span>
+                    <h4 class="font-bold text-emerald-900 text-base mt-1">We reply in writing</h4>
+                    <p class="lang-bn text-xs text-emerald-700">পরিকল্পনা ও ফি নিশ্চিতকরণ</p>
+                </div>
+            </div>
+
+            <!-- Interactive Checklist -->
+            <div>
+                <h3 class="font-bold text-slate-800 mb-4 text-base flex items-center">
+                    <i class="fa-solid fa-square-check text-emerald-600 mr-2"></i>
+                    Interactive Document Readiness Checklist / কি কি প্রস্তুত রাখতে হবে
+                </h3>
+                <div class="grid sm:grid-cols-2 gap-3 text-sm">
+                    <label class="flex items-start p-3 bg-slate-50 rounded-xl hover:bg-slate-100 cursor-pointer transition border border-slate-200/60">
+                        <input type="checkbox" class="mt-1 rounded text-veloraa-navy focus:ring-veloraa-accent h-4 w-4">
+                        <div class="ml-3">
+                            <span class="font-medium text-slate-800">Passport Details</span>
+                            <span class="block text-xs text-slate-500">Passport number, issue date and expiry date / পাসপোর্ট নম্বর, ইস্যুর তারিখ ও মেয়াদ</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 bg-slate-50 rounded-xl hover:bg-slate-100 cursor-pointer transition border border-slate-200/60">
+                        <input type="checkbox" class="mt-1 rounded text-veloraa-navy focus:ring-veloraa-accent h-4 w-4">
+                        <div class="ml-3">
+                            <span class="font-medium text-slate-800">Medical Reports</span>
+                            <span class="block text-xs text-slate-500">Blood tests, MRI, CT scan, X-ray, Ultrasound, Biopsy, Endoscopy, ECG, Discharge Summary</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 bg-slate-50 rounded-xl hover:bg-slate-100 cursor-pointer transition border border-slate-200/60">
+                        <input type="checkbox" class="mt-1 rounded text-veloraa-navy focus:ring-veloraa-accent h-4 w-4">
+                        <div class="ml-3">
+                            <span class="font-medium text-slate-800">Diagnosis & Medicines</span>
+                            <span class="block text-xs text-slate-500">The diagnosis given and current medicines taken / আপনার রোগ নির্ণয় এবং বর্তমান ঔষধ</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 bg-slate-50 rounded-xl hover:bg-slate-100 cursor-pointer transition border border-slate-200/60">
+                        <input type="checkbox" class="mt-1 rounded text-veloraa-navy focus:ring-veloraa-accent h-4 w-4">
+                        <div class="ml-3">
+                            <span class="font-medium text-slate-800">WhatsApp Active Phone</span>
+                            <span class="block text-xs text-slate-500">A phone number that has WhatsApp active / WhatsApp থাকা একটি ফোন নম্বর</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 bg-slate-50 rounded-xl hover:bg-slate-100 cursor-pointer transition border border-slate-200/60">
+                        <input type="checkbox" class="mt-1 rounded text-veloraa-navy focus:ring-veloraa-accent h-4 w-4">
+                        <div class="ml-3">
+                            <span class="font-medium text-slate-800">Travel Plan Details</span>
+                            <span class="block text-xs text-slate-500">Travel month, number of people coming, rooms needed / যাত্রার মাস, সদস্য ও রুমের সংখ্যা</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 bg-slate-50 rounded-xl hover:bg-slate-100 cursor-pointer transition border border-slate-200/60">
+                        <input type="checkbox" class="mt-1 rounded text-veloraa-navy focus:ring-veloraa-accent h-4 w-4">
+                        <div class="ml-3">
+                            <span class="font-medium text-slate-800">Companion Information</span>
+                            <span class="block text-xs text-slate-500">Companion names and relationship to patient / সঙ্গীদের নাম ও রোগীর সাথে সম্পর্ক</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Important Note Callout -->
+            <div class="p-5 bg-rose-50 border-l-4 border-rose-500 rounded-xl space-y-2">
+                <div class="flex items-center space-x-2 text-rose-800 font-bold text-sm uppercase">
+                    <i class="fa-solid fa-circle-exclamation text-rose-600"></i>
+                    <span>IMPORTANT / গুরুত্বপূর্ণ তথ্য</span>
+                </div>
+                <p class="text-sm text-rose-950 leading-relaxed">
+                    This form cannot carry direct heavy files. After submitting, please send clear photos or scans of your medical reports to us on <strong>WhatsApp</strong> or by <strong>email</strong>. We cannot review a case from the form alone.
+                </p>
+                <p class="lang-bn text-xs text-rose-800">
+                    এই ফর্মে ফাইল পাঠানো যায় না। ফর্ম জমা দেওয়ার পর রিপোর্টগুলোর স্পষ্ট ছবি বা স্ক্যান WhatsApp অথবা ইমেইলে পাঠান। শুধু ফর্ম দেখে কেস পর্যালোচনা সম্ভব নয়।
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Eight Step Process Timeline -->
+        <section id="process" class="bg-white rounded-2xl p-6 sm:p-8 card-shadow border border-slate-100 space-y-8">
+            <div class="border-b border-slate-100 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Section 02</span>
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">2</span>
+                    The Eight-Step Process / আট ধাপের প্রক্রিয়া
+                </h2>
+                <p class="text-slate-500 text-sm mt-1">Every step below is covered by the service fee. You will always know what happens next.</p>
+            </div>
+
+            <!-- Timeline grid -->
+            <div class="relative border-l-2 border-slate-200 ml-4 sm:ml-6 pl-6 space-y-8">
+                <!-- Step 1 -->
+                <div class="relative group">
+                    <span class="absolute -left-[35px] top-0 w-8 h-8 rounded-full bg-veloraa-navy text-white font-bold text-sm flex items-center justify-center ring-4 ring-white shadow">1</span>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-veloraa-accent transition">
+                        <h4 class="font-bold text-slate-800 text-base">You send us the patient's reports</h4>
+                        <p class="lang-bn text-xs text-slate-600 mt-1">আপনি রোগীর রিপোর্ট পাঠাবেন</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative group">
+                    <span class="absolute -left-[35px] top-0 w-8 h-8 rounded-full bg-veloraa-navy text-white font-bold text-sm flex items-center justify-center ring-4 ring-white shadow">2</span>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-veloraa-accent transition">
+                        <h4 class="font-bold text-slate-800 text-base">We translate records & prepare case summary</h4>
+                        <p class="lang-bn text-xs text-slate-600 mt-1">রিপোর্ট অনুবাদ ও কেস সামারি তৈরি</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative group">
+                    <span class="absolute -left-[35px] top-0 w-8 h-8 rounded-full bg-veloraa-navy text-white font-bold text-sm flex items-center justify-center ring-4 ring-white shadow">3</span>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-veloraa-accent transition">
+                        <h4 class="font-bold text-slate-800 text-base">Chinese specialist reviews case remotely (second opinion)</h4>
+                        <p class="lang-bn text-xs text-slate-600 mt-1">চীনের বিশেষজ্ঞ রিমোট পরামর্শ দেবেন (সেকেন্ড ওপিনিয়ন)</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative group">
+                    <span class="absolute -left-[35px] top-0 w-8 h-8 rounded-full bg-veloraa-navy text-white font-bold text-sm flex items-center justify-center ring-4 ring-white shadow">4</span>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-veloraa-accent transition">
+                        <h4 class="font-bold text-slate-800 text-base">We confirm hospital, department and service fee in writing</h4>
+                        <p class="lang-bn text-xs text-slate-600 mt-1">হাসপাতাল, বিভাগ ও সার্ভিস ফি লিখিতভাবে নিশ্চিত করা হবে</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative group">
+                    <span class="absolute -left-[35px] top-0 w-8 h-8 rounded-full bg-veloraa-navy text-white font-bold text-sm flex items-center justify-center ring-4 ring-white shadow">5</span>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-veloraa-accent transition">
+                        <h4 class="font-bold text-slate-800 text-base">Hospital issues visa invitation letter</h4>
+                        <p class="lang-bn text-xs text-slate-600 mt-1">হাসপাতাল ভিসার জন্য অফিসিয়াল আমন্ত্রণপত্র দেবে</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="relative group">
+                    <span class="absolute -left-[35px] top-0 w-8 h-8 rounded-full bg-veloraa-navy text-white font-bold text-sm flex items-center justify-center ring-4 ring-white shadow">6</span>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-veloraa-accent transition">
+                        <h4 class="font-bold text-slate-800 text-base">Book appointment, assist visa documents & travel advice</h4>
+                        <p class="lang-bn text-xs text-slate-600 mt-1">অ্যাপয়েন্টমেন্ট, ভিসা কাগজপত্র ও ভ্রমণ পরামর্শ</p>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="relative group">
+                    <span class="absolute -left-[35px] top-0 w-8 h-8 rounded-full bg-veloraa-navy text-white font-bold text-sm flex items-center justify-center ring-4 ring-white shadow">7</span>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-veloraa-accent transition">
+                        <h4 class="font-bold text-slate-800 text-base">Airport pickup & hospital interpretation accompaniment</h4>
+                        <p class="lang-bn text-xs text-slate-600 mt-1">বিমানবন্দরে অভ্যর্থনা ও হাসপাতালে অনুবাদসহ সার্বক্ষণিক সঙ্গ</p>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="relative group">
+                    <span class="absolute -left-[35px] top-0 w-8 h-8 rounded-full bg-emerald-600 text-white font-bold text-sm flex items-center justify-center ring-4 ring-white shadow">8</span>
+                    <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 hover:border-emerald-400 transition">
+                        <h4 class="font-bold text-emerald-950 text-base">Post-treatment handover & follow-up in Bangladesh</h4>
+                        <p class="lang-bn text-xs text-emerald-800 mt-1">চিকিৎসার পর রিপোর্ট হস্তান্তর ও দেশে ফেরার পর নিয়মিত ফলো-আপ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 & 4: Service Fee & 10 Included Services -->
+        <section id="service-fee" class="space-y-8">
+            <!-- Fee Hero Card -->
+            <div class="bg-gradient-to-r from-veloraa-navy to-slate-800 rounded-2xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+                <div class="grid md:grid-cols-3 gap-6 items-center relative z-10">
+                    <div class="md:col-span-2 space-y-3">
+                        <span class="inline-block bg-sky-500/20 text-sky-300 text-xs font-extrabold uppercase px-3 py-1 rounded-full border border-sky-400/30">
+                            Transparent Flat Rate
+                        </span>
+                        <h2 class="text-3xl font-extrabold">Our Service Fee / সার্ভিস ফি</h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            The fee is confirmed in writing after your case is reviewed, and before any payment is made. We charge a transparent service fee and take no commission from hospitals — the patient is our client.
+                        </p>
+                        <p class="lang-bn text-xs text-slate-400">
+                            কেস পর্যালোচনার পর এবং কোনো পেমেন্ট করার আগে ফি লিখিতভাবে নিশ্চিত করা হয়। আমরা হাসপাতাল থেকে কোনো কমিশন নিই না- এখানে উল্লেখিত ফিই আমাদের একমাত্র আয়।
+                        </p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center">
+                        <span class="text-xs text-sky-200 font-semibold uppercase block mb-1">Confirmed by Veloraa</span>
+                        <div class="text-4xl sm:text-5xl font-black text-amber-400 tracking-tight mb-1">¥2,000</div>
+                        <span class="text-xs text-slate-200 block">per patient (১-৩০ দিনের জন্য)</span>
+                        <div class="mt-4 pt-3 border-t border-white/10 text-[11px] text-slate-300">
+                            Each extra day beyond 30 days is charged separately and confirmed in writing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 Included Services Grid -->
+            <div id="includes" class="bg-white rounded-2xl p-6 sm:p-8 card-shadow border border-slate-100 space-y-6">
+                <div class="border-b border-slate-100 pb-4">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Section 04</span>
+                    <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">4</span>
+                        What the ¥2,000 Fee Includes / ফি-তে যা অন্তর্ভুক্ত (১০টি সেবা)
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- 1 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">1</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Medical Records Translation & Summary</h4>
+                        <p class="text-xs text-slate-500 mt-1">Every report translated into Chinese & arranged into a clear case file.</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">মেডিকেল রিপোর্ট অনুবাদ ও কেস সামারি</p>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">2</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Remote Consultation / Second Opinion</h4>
+                        <p class="text-xs text-slate-500 mt-1">Chinese specialist studies the case & gives expert opinion before travel.</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">চীনা বিশেষজ্ঞের সাথে রিমোট সেকেন্ড ওপিনিয়ন</p>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">3</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Hospital Appointment Booking</h4>
+                        <p class="text-xs text-slate-500 mt-1">Department, doctor and arrival dates are pre-arranged with the hospital.</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">হাসপাতালের অ্যাপয়েন্টমেন্ট ও আগাম সমন্বয়</p>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">4</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Visa Invitation Letter Support</h4>
+                        <p class="text-xs text-slate-500 mt-1">We follow up with the hospital for the official visa invitation letter.</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">ভিসার আমন্ত্রণপত্র (হাসপাতাল কর্তৃক)</p>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">5</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Airport Pickup & Drop-Off</h4>
+                        <p class="text-xs text-slate-500 mt-1">Personal reception at the airport upon arrival and departure in China.</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">চীনে বিমানবন্দর থেকে আনা-নেওয়া</p>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">6</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Hospital Accompaniment & Interpretation</h4>
+                        <p class="text-xs text-slate-500 mt-1">An interpreter stays with you through registration, tests, & doctor visits.</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">হাসপাতালে সঙ্গ, অনুবাদ ও সার্বক্ষণিক সহায়তা</p>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">7</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Accommodation & Transport Booking</h4>
+                        <p class="text-xs text-slate-500 mt-1">Finding and booking nearby room & transport arrangements (room paid separately).</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">থাকার ব্যবস্থা ও যাতায়াত বুকিং (ভাড়া আলাদা)</p>
+                    </div>
+
+                    <!-- 8 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">8</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Help Buying Local SIM Card</h4>
+                        <p class="text-xs text-slate-500 mt-1">Assistance registering a Chinese SIM under your passport (SIM cost paid by patient).</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">স্থানীয় সিম কার্ড কিনতে সহায়তা</p>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md transition">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">9</div>
+                        <h4 class="font-bold text-slate-800 text-sm">Police Residence Registration</h4>
+                        <p class="text-xs text-slate-500 mt-1">Accompanying you to complete mandatory 24-hr police registration.</p>
+                        <p class="lang-bn text-[11px] text-slate-600 mt-1">পুলিশ স্টেশনে ঠিকানা নিবন্ধনে সহায়তা</p>
+                    </div>
+
+                    <!-- 10 -->
+                    <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/40 hover:bg-white hover:shadow-md transition sm:col-span-2 lg:col-span-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">10</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Report Handover & Post-Return Follow-up</h4>
+                                <p class="text-xs text-slate-600">All medical reports organized in one file, medication guidance, and continued follow-up after returning to Bangladesh.</p>
+                                <p class="lang-bn text-[11px] text-emerald-800">রিপোর্ট ও ডিসচার্জ সামারি হস্তান্তর এবং দেশে ফেরার পর ফলো-আপ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Accommodation & Interactive Calculator -->
+        <section id="accommodation" class="bg-white rounded-2xl p-6 sm:p-8 card-shadow border border-slate-100 space-y-8">
+            <div class="border-b border-slate-100 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Section 05</span>
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">5</span>
+                    Accommodation / থাকার ব্যবস্থা
+                </h2>
+                <p class="text-slate-500 text-sm mt-1">Arranged by Veloraa, paid separately by patient.</p>
+            </div>
+
+            <!-- Price Highlight & Amenities -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-sky-50 rounded-2xl p-6 border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-sky-700 uppercase tracking-wide">Confirmed Price Range</span>
+                        <div class="text-3xl font-extrabold text-veloraa-navy mt-1">¥100 – ¥120 <span class="text-sm font-normal text-slate-600">per room / day</span></div>
+                        <p class="text-xs text-slate-600 mt-2">
+                            2-3 persons can share one room (~¥34-60 per person/day depending on sharing).
+                        </p>
+                        <p class="lang-bn text-xs text-sky-800 mt-1">
+                            এক রুমে ২-৩ জন থাকতে পারবেন—প্রতিজন প্রতিদিন প্রায় ¥৩৪-৬০।
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-sky-200/60 text-xs text-slate-500">
+                        * Accommodation is separate from the ¥2,000 service fee.
+                    </div>
+                </div>
+
+                <!-- Room Features -->
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center flex flex-col items-center justify-center">
+                        <i class="fa-solid fa-utensils text-2xl text-veloraa-accent mb-2"></i>
+                        <h5 class="font-bold text-xs text-slate-800">Cook in room</h5>
+                        <p class="lang-bn text-[10px] text-slate-500">নিজের খাবার রান্না</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center flex flex-col items-center justify-center">
+                        <i class="fa-solid fa-bath text-2xl text-veloraa-accent mb-2"></i>
+                        <h5 class="font-bold text-xs text-slate-800">Private Washroom</h5>
+                        <p class="lang-bn text-[10px] text-slate-500">আলাদা ওয়াশরুম</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center flex flex-col items-center justify-center">
+                        <i class="fa-solid fa-shirt text-2xl text-veloraa-accent mb-2"></i>
+                        <h5 class="font-bold text-xs text-slate-800">Washing Machine</h5>
+                        <p class="lang-bn text-[10px] text-slate-500">ওয়াশিং মেশিন</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Cost Calculator Widget -->
+            <div class="bg-slate-900 text-white p-6 rounded-2xl space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <h4 class="font-bold text-base flex items-center">
+                        <i class="fa-solid fa-calculator text-amber-400 mr-2"></i>
+                        Accommodation & Fee Estimator Tool
+                    </h4>
+                    <span class="text-xs text-slate-400">Interactive Example</span>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Number of Days</label>
+                        <input type="number" id="calcDays" value="20" min="1" max="90" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-sky-400" oninput="calculateEstimate()">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Number of People</label>
+                        <input type="number" id="calcPeople" value="2" min="1" max="10" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-sky-400" oninput="calculateEstimate()">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Avg Room Rate / Day (RMB)</label>
+                        <input type="number" id="calcRate" value="110" min="80" max="300" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-sky-400" oninput="calculateEstimate()">
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 p-4 rounded-xl text-xs space-y-2">
+                    <div class="flex justify-between text-slate-300">
+                        <span>Service Fee (Fixed for 1-30 days):</span>
+                        <span class="font-mono font-bold text-sky-300">¥2,000</span>
+                    </div>
+                    <div class="flex justify-between text-slate-300">
+                        <span>Total Estimated Room Cost:</span>
+                        <span class="font-mono font-bold text-sky-300" id="calcTotalRoom">¥2,200</span>
+                    </div>
+                    <div class="flex justify-between border-t border-slate-700 pt-2 text-sm font-bold text-white">
+                        <span>Estimated Cost Per Person:</span>
+                        <span class="font-mono text-amber-400" id="calcPerPerson">≈ ¥2,100</span>
+                    </div>
+                </div>
+                <p class="text-[11px] text-slate-400 italic">Excludes hospital, doctor, and medicine charges.</p>
+            </div>
+        </section>
+
+        <!-- Section 6: Exclusions (What is Not Included) -->
+        <section id="not-included" class="bg-white rounded-2xl p-6 sm:p-8 card-shadow border border-slate-100 space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Section 06</span>
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">6</span>
+                    What is Not Included / কী অন্তর্ভুক্ত নয়
+                </h2>
+                <p class="text-slate-500 text-sm mt-1">Paid directly by you. We add zero markup to these costs.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-3 text-sm">
+                <div class="flex items-center space-x-3 p-3 bg-rose-50/50 border border-rose-100 rounded-xl">
+                    <i class="fa-solid fa-circle-xmark text-rose-500 text-base"></i>
+                    <div>
+                        <span class="font-bold text-slate-800 block text-xs sm:text-sm">Hospital & Doctor Charges</span>
+                        <span class="text-xs text-slate-500">Surgery, diagnostic tests & investigations</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 p-3 bg-rose-50/50 border border-rose-100 rounded-xl">
+                    <i class="fa-solid fa-circle-xmark text-rose-500 text-base"></i>
+                    <div>
+                        <span class="font-bold text-slate-800 block text-xs sm:text-sm">Medicine Costs</span>
+                        <span class="text-xs text-slate-500">Prescribed medications & treatments</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 p-3 bg-rose-50/50 border border-rose-100 rounded-xl">
+                    <i class="fa-solid fa-circle-xmark text-rose-500 text-base"></i>
+                    <div>
+                        <span class="font-bold text-slate-800 block text-xs sm:text-sm">Visa Fees & Air Tickets</span>
+                        <span class="text-xs text-slate-500">International flights & embassy fees</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 p-3 bg-rose-50/50 border border-rose-100 rounded-xl">
+                    <i class="fa-solid fa-circle-xmark text-rose-500 text-base"></i>
+                    <div>
+                        <span class="font-bold text-slate-800 block text-xs sm:text-sm">Accommodation Direct Rent</span>
+                        <span class="text-xs text-slate-500">Arranged by us, paid directly by you</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 p-3 bg-rose-50/50 border border-rose-100 rounded-xl">
+                    <i class="fa-solid fa-circle-xmark text-rose-500 text-base"></i>
+                    <div>
+                        <span class="font-bold text-slate-800 block text-xs sm:text-sm">Food & Personal Expenses</span>
+                        <span class="text-xs text-slate-500">Cooking supplies or dining out</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 p-3 bg-rose-50/50 border border-rose-100 rounded-xl">
+                    <i class="fa-solid fa-circle-xmark text-rose-500 text-base"></i>
+                    <div>
+                        <span class="font-bold text-slate-800 block text-xs sm:text-sm">Travel Insurance & SIM Card</span>
+                        <span class="text-xs text-slate-500">We assist buying SIM, but user pays</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-100 rounded-xl text-xs text-slate-700 font-medium">
+                <i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i>
+                <strong>Before You Pay:</strong> Not sure whether something is included? Ask us in writing before you pay anything.
+            </div>
+        </section>
+
+        <!-- Section 7: Payment Terms -->
+        <section id="payment-terms" class="bg-white rounded-2xl p-6 sm:p-8 card-shadow border border-slate-100 space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Section 07</span>
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">7</span>
+                    Payment Terms / পেমেন্টের শর্ত
+                </h2>
+                <p class="text-slate-500 text-sm mt-1">Nothing is paid before it is confirmed in writing.</p>
+            </div>
+
+            <div class="space-y-4 text-sm">
+                <div class="flex items-start space-x-3">
+                    <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                    <div>
+                        <span class="font-bold text-slate-800">Confirmed Written Quote</span>
+                        <p class="text-xs text-slate-500">The ¥2,000 service fee is confirmed in writing before any payment is made — you pay nothing until you have that confirmation.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                    <div>
+                        <span class="font-bold text-slate-800">Zero Commission Guarantee</span>
+                        <p class="text-xs text-slate-500">Veloraa takes no commission from hospitals. Patient rights & health are our only priorities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Schedule Form Representation -->
+            <div class="bg-amber-50/60 border border-amber-200 p-5 rounded-2xl space-y-4">
+                <h4 class="font-bold text-slate-800 text-sm flex items-center">
+                    <i class="fa-solid fa-file-signature text-amber-600 mr-2"></i>
+                    Patient Individual Schedule Summary
+                </h4>
+
+                <div class="grid sm:grid-cols-3 gap-4 text-xs">
+                    <div class="bg-white p-3 rounded-xl border border-amber-200">
+                        <span class="text-slate-400 font-semibold uppercase block text-[10px]">Booking Deposit</span>
+                        <span class="text-slate-800 font-bold block mt-1">Due after hospital accepts case</span>
+                        <div class="mt-2 text-amber-600 font-extrabold text-lg">¥ <span class="text-xs font-normal text-slate-400">(Confirmed in writing)</span></div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-amber-200">
+                        <span class="text-slate-400 font-semibold uppercase block text-[10px]">Balance Due</span>
+                        <span class="text-slate-800 font-bold block mt-1">Before travel or on arrival in China</span>
+                        <div class="mt-2 text-amber-600 font-extrabold text-lg">¥ <span class="text-xs font-normal text-slate-400">(Confirmed in writing)</span></div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-amber-200">
+                        <span class="text-slate-400 font-semibold uppercase block text-[10px]">Quotation Validity</span>
+                        <span class="text-slate-800 font-bold block mt-1">Valid for designated period</span>
+                        <div class="mt-2 text-amber-600 font-extrabold text-lg">Valid Days <span class="text-xs font-normal text-slate-400">(Set per case)</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Contact Us & Disclaimer -->
+        <section id="contact" class="bg-white rounded-2xl p-6 sm:p-8 card-shadow border border-slate-100 space-y-8">
+            <div class="border-b border-slate-100 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Section 08</span>
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">8</span>
+                    Contact Us / যোগাযোগ
+                </h2>
+                <p class="text-slate-500 text-sm mt-1">We are here to help. We reply in English or Bengali.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Contact Channels -->
+                <div class="space-y-4">
+                    <a href="https://wa.me/8615529507360" target="_blank" class="flex items-center p-4 bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 rounded-2xl transition group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl font-bold mr-4 group-hover:scale-105 transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-emerald-800 uppercase tracking-wide">WhatsApp Contact</span>
+                            <div class="text-lg font-bold text-slate-900">+86 155 29507360</div>
+                            <span class="text-xs text-slate-500 block">Free over Wi-Fi from Bangladesh</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:info@veloraa.health" class="flex items-center p-4 bg-sky-50 hover:bg-sky-100/80 border border-sky-200 rounded-2xl transition group">
+                        <div class="w-12 h-12 rounded-xl bg-veloraa-navy text-white flex items-center justify-center text-xl font-bold mr-4 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-sky-800 uppercase tracking-wide">Email Support</span>
+                            <div class="text-lg font-bold text-slate-900">info@veloraa.health</div>
+                            <span class="text-xs text-slate-500 block">Send your reports & queries anytime</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- QR Code Box -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center flex flex-col items-center justify-center">
+                    <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-xs mb-3">
+                        <!-- SVG Simulated QR Code -->
+                        <svg class="w-36 h-36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" fill="white"/>
+                            <!-- Outer Corners -->
+                            <path d="M10 10H35V35H10V10ZM15 15V30H30V15H15Z" fill="#0b3c5d"/>
+                            <rect x="20" y="20" width="5" height="5" fill="#0b3c5d"/>
+                            <path d="M65 10H90V35H65V10ZM70 15V30H85V15H70Z" fill="#0b3c5d"/>
+                            <rect x="75" y="20" width="5" height="5" fill="#0b3c5d"/>
+                            <path d="M10 65H35V90H10V65ZM15 70V85H30V70H15Z" fill="#0b3c5d"/>
+                            <rect x="20" y="75" width="5" height="5" fill="#0b3c5d"/>
+                            <!-- Random QR Data blocks -->
+                            <rect x="40" y="10" width="5" height="5" fill="#0b3c5d"/>
+                            <rect x="50" y="15" width="10" height="5" fill="#0b3c5d"/>
+                            <rect x="45" y="25" width="5" height="10" fill="#0b3c5d"/>
+                            <rect x="65" y="40" width="15" height="5" fill="#0b3c5d"/>
+                            <rect x="15" y="45" width="20" height="5" fill="#0b3c5d"/>
+                            <rect x="40" y="50" width="5" height="15" fill="#0b3c5d"/>
+                            <rect x="55" y="55" width="10" height="10" fill="#0b3c5d"/>
+                            <rect x="75" y="65" width="15" height="15" fill="#0b3c5d"/>
+                            <rect x="50" y="75" width="15" height="5" fill="#0b3c5d"/>
+                            <rect x="60" y="85" width="5" height="5" fill="#0b3c5d"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold text-slate-800 text-sm">Scan to chat on WhatsApp</span>
+                    <span class="lang-bn text-xs text-slate-500">স্ক্যান করে WhatsApp-এ কথা বলুন</span>
+                    <span class="text-xs text-emerald-700 font-mono mt-1 font-semibold">wa.me/8615529507360</span>
+                </div>
+            </div>
+
+            <!-- Legal Disclaimer Box -->
+            <div class="mt-8 p-4 bg-slate-100 rounded-xl text-xs text-slate-600 leading-relaxed space-y-2">
+                <p class="font-bold text-slate-700 uppercase">Disclaimer / আইনি সতর্কবার্তা:</p>
+                <p>
+                    Veloraa is a medical coordination and translation agency. We are not a hospital or a clinic, we do not give medical advice, and all medical decisions are made exclusively by the hospital and its certified doctors.
+                </p>
+                <p class="lang-bn text-[11px] text-slate-500">
+                    ভেলোরা একটি চিকিৎসা সমন্বয় ও অনুবাদ সংস্থা। আমরা হাসপাতাল বা ক্লিনিক নই, কোনো চিকিৎসা পরামর্শ দিই না, এবং সব চিকিৎসা সিদ্ধান্ত হাসপাতাল ও ডাক্তারই নেন।
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <div class="flex items-center justify-center space-x-2">
+                <span class="font-bold text-white tracking-widest uppercase">VELORAA MEDICAL TOURISM</span>
+                <span>•</span>
+                <span>Patient Welcome Guide 2026</span>
+            </div>
+            <p>© 2026 Veloraa Health. All rights reserved. Medical travel from Bangladesh to China.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // Interactive Cost Calculator Logic
+        function calculateEstimate() {
+            const days = parseInt(document.getElementById('calcDays').value) || 0;
+            const people = parseInt(document.getElementById('calcPeople').value) || 1;
+            const rate = parseFloat(document.getElementById('calcRate').value) || 0;
+
+            const totalRoom = days * rate;
+            const serviceFee = 2000;
+            const perPerson = Math.round((totalRoom + serviceFee) / people);
+
+            document.getElementById('calcTotalRoom').innerText = '¥' + totalRoom.toLocaleString();
+            document.getElementById('calcPerPerson').innerText = '≈ ¥' + perPerson.toLocaleString();
+        }
+
+        // Language toggle display state
+        let isBengaliHidden = false;
+        function toggleLanguage() {
+            const bnElements = document.querySelectorAll('.lang-bn');
+            const btnText = document.getElementById('langBtnText');
+            
+            isBengaliHidden = !isBengaliHidden;
+            
+            bnElements.forEach(el => {
+                if (isBengaliHidden) {
+                    el.style.display = 'none';
+                } else {
+                    el.style.display = 'block';
+                }
+            });
+
+            btnText.innerText = isBengaliHidden ? 'Show Bengali / বাংলা দেখান' : 'Hide Bengali / বাংলা লুকান';
+        }
+    </script>
+</body>
+</html>
